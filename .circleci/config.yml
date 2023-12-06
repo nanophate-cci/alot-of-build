@@ -2,10 +2,10 @@ version: 2.1
 
 jobs:
   build:
-    machine: true
+    docker:
+      - image: cimg/base:stable
     steps:
       - run:
           name: Retrive logs
-          command: journalctl -f --no-pager
-          background: true
+          command: echo "aaa"
       - run: sleep 1000
